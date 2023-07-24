@@ -54,7 +54,6 @@ Running start.sh (or start.bat for MS Windows) script should bring up all servic
 
 * Token digits are optional, default is to use 0-9
 * Token digits must be single digits, otherwise bad request is returned
-*
 
 ### Validator
 
@@ -65,5 +64,6 @@ Running start.sh (or start.bat for MS Windows) script should bring up all servic
 * Uses nextjs with react
 * Uses CORS to be able to communicate to the generator and validator services
 * Has basic UI using material UI
-* Unittesting has a problem but the idea is to basically test the events that occur simulating user input
 * Tested using chrome
+* Added unittesting that uses react library and user events to validate basic scenarios
+
