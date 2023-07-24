@@ -28,7 +28,7 @@ public class GeneratorController {
 
         String result = generatorService.generateToken(availableDigits);
         if (result.isBlank()) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Only single digits are allowed" + availableDigits);
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Only single digits are allowed " + availableDigits);
         }
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
