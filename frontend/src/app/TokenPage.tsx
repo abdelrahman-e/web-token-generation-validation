@@ -1,9 +1,9 @@
 'use client'
 
 import React, {useState} from 'react';
-import {VALIDATION_API_URI} from "@/constants/TokenConstants";
 import {generateTokenApi} from "@/api/GenerationApi";
-import {Box, Button, TextField} from "@mui/material";
+import {Alert, Box, Button, TextField} from "@mui/material";
+import {validateApi} from "@/api/ValidationApi";
 
 export default function TokenPage() {
     const [availableDigits, setAvailableDigits] = useState('');
@@ -16,23 +16,39 @@ export default function TokenPage() {
         try {
             const result = await generateTokenApi(availableDigits);
             setGeneratedToken(result);
+            setGeneratedTokenError('')
             setValidationResult('');
         } catch (err) {
             console.log(err);
             setGeneratedTokenError(err as string);
             setGeneratedToken('');
-
+            setValidationResult('');
         }
 
     };
 
     const handleValidateToken = async (): Promise<void> => {
-        let response = await fetch(VALIDATION_API_URI + `${generatedToken}`);
-        response = await response.json();
-        const result = response ? 'true' : 'false';
-        setValidationResult(result);
-        console.log(validationResult);
+        try {
+            const result = await validateApi(generatedToken);
+            setValidationResult(result);
+        } catch (err) {
+            console.log(err);
+        }
     };
+
+    const getGeneratedFieldColor = () => {
+        return validationResult === 'true' ? 'success' : 'primary';
+    }
+
+    const getGeneratedFieldLabel = (): string => {
+        if (validationResult === 'false') {
+            return 'Invalid generated Token';
+        } else if (validationResult === 'true') {
+            return 'Valid Token';
+        } else {
+            return 'Generated Token';
+        }
+    }
 
     return (
         <Box>
@@ -51,15 +67,18 @@ export default function TokenPage() {
                 />
                 <Button onClick={handleGenerateToken}>Generate Token</Button>
             </Box>
+            <>{generatedTokenError && (<Alert severity="error">{generatedTokenError.toString()}</Alert>)}</>
             <Box display="flex">
                 {generatedToken && (
                     <><TextField variant="standard"
-                                 label={validationResult === 'false' ? 'Invalid generated Token' : 'Generated Token'}
+                                 label={getGeneratedFieldLabel()}
                                  value={generatedToken}
                                  InputProps={{
                                      readOnly: true,
                                  }}
                                  error={validationResult === 'false'}
+                                 color={getGeneratedFieldColor()}
+                                 focused
                     >
                     </TextField><Button onClick={handleValidateToken}>Validate Token</Button></>
                 )}

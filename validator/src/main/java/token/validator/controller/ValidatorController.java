@@ -24,7 +24,7 @@ public class ValidatorController {
     public ResponseEntity<String> getGeneratedToken(@PathVariable String token) {
 
         String result = validatorService.validateToken(token);
-        if (result.isBlank()) {
+        if (result == null || result.isEmpty()) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("invalid token " + token);
         }
         return ResponseEntity.status(HttpStatus.OK).body(result);

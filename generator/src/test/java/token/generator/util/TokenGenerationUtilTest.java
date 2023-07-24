@@ -9,18 +9,18 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.containsString;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static token.generator.constants.GeneratorConstants.TOKEN_LENGTH_WITH_DASHES;
 
 
 public class TokenGenerationUtilTest {
 
-    final int EXPECTED_TOKEN_LENGTH = 19;
 
     @Test
     void testValidTokenGenerationWithoutDigits() {
         String result = TokenGenerationUtil.generateToken(Collections.emptyList());
         System.out.println(result);
 
-        assertEquals(EXPECTED_TOKEN_LENGTH, result.length());
+        assertEquals(TOKEN_LENGTH_WITH_DASHES, result.length());
 
     }
 
@@ -31,8 +31,8 @@ public class TokenGenerationUtilTest {
 
         assertThat(result, allOf(containsString("1"), containsString("2"), containsString("3"), containsString("4")));
 
-        assertEquals(EXPECTED_TOKEN_LENGTH, result.length());
+        assertEquals(TOKEN_LENGTH_WITH_DASHES, result.length());
     }
-    
+
 
 }
