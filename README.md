@@ -67,4 +67,11 @@ Running start.sh (or start.bat for MS Windows) script should bring up all servic
 * Tested using chrome
 * Added unittesting that uses react library and user events to validate basic scenarios
 * Images for ui state
+![generated_token_ui](https://github.com/abdelrahman-e/web-token-generation-validation/assets/56705001/aa955370-3682-4e8d-b481-153ed29df4b0)
+
+![valid token_ui](https://github.com/abdelrahman-e/web-token-generation-validation/assets/56705001/f9be05c2-d01f-4d71-bf4e-93105f737659)
+
+![invalid_token_ui](https://github.com/abdelrahman-e/web-token-generation-validation/assets/56705001/7012f343-391b-4e3e-9eac-ba1e4b9eb9bb)
+
+
 
