@@ -66,4 +66,5 @@ Running start.sh (or start.bat for MS Windows) script should bring up all servic
 * Has basic UI using material UI
 * Tested using chrome
 * Added unittesting that uses react library and user events to validate basic scenarios
+* Images for ui state
 
