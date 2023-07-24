@@ -41,7 +41,7 @@ start.bat
 Running start.sh (or start.bat for MS Windows) script should bring up all services and make FE available on localhost:
 8080
 
-## Assumptions
+## Assumptions and Info
 
 ### General
 
