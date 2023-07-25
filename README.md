@@ -47,8 +47,7 @@ Running start.sh (or start.bat for MS Windows) script should bring up all servic
 
 * Each spring service is separate
 * The generator service has 100% test coverage(with an integration test as well), the validator has only unit testing
-  for util only given it's the same
-  logic
+  for util only given it's the same logic
 
 ### Generator
 
@@ -66,7 +65,9 @@ Running start.sh (or start.bat for MS Windows) script should bring up all servic
 * Has basic UI using material UI
 * Tested using chrome
 * Added unittesting that uses react library and user events to validate basic scenarios
-* Images for ui state
+* Added Images for ui state
+
+
 ![generated_token_ui](https://github.com/abdelrahman-e/web-token-generation-validation/assets/56705001/aa955370-3682-4e8d-b481-153ed29df4b0)
 
 ![valid token_ui](https://github.com/abdelrahman-e/web-token-generation-validation/assets/56705001/f9be05c2-d01f-4d71-bf4e-93105f737659)
