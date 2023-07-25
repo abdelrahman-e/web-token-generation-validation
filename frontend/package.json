@@ -6,7 +6,6 @@
     "dev": "next dev -p 8080",
     "build": "next build",
     "start": "next build && next start -p 8080",
-    "lint": "next lint",
     "test": "jest --clearCache&& jest"
   },
   "dependencies": {
@@ -24,7 +23,6 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@babel/preset-typescript": "^7.22.5",
     "@next/eslint-plugin-next": "^13.4.12",
     "@testing-library/dom": "^9.3.1",
     "@testing-library/jest-dom": "^5.17.0",
