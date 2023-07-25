@@ -56,6 +56,7 @@ Running start.sh (or start.bat for MS Windows) script should bring up all servic
 
 ### Validator
 
+* Removes dashes before validating using luhn's algorithm
 * Returns bad request in case token is invalid, otherwise 'true' or 'false' strings
 
 ### Frontend
@@ -66,7 +67,6 @@ Running start.sh (or start.bat for MS Windows) script should bring up all servic
 * Tested using chrome
 * Added unittesting that uses react library and user events to validate basic scenarios
 * Added Images for ui state
-
 
 ![generated_token_ui](https://github.com/abdelrahman-e/web-token-generation-validation/assets/56705001/aa955370-3682-4e8d-b481-153ed29df4b0)
 

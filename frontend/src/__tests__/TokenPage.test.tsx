@@ -48,4 +48,3 @@ describe('TokenPage', () => {
     expect(tokenLabel).toBeTruthy();
   });
 });
-
