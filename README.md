@@ -47,14 +47,12 @@ Running start.sh (or start.bat for MS Windows) script should bring up all servic
 
 * Each spring service is separate
 * The generator service has 100% test coverage(with an integration test as well), the validator has only unit testing
-  for util only given it's the same
-  logic
+  for util only given it's the same logic
 
 ### Generator
 
 * Token digits are optional, default is to use 0-9
 * Token digits must be single digits, otherwise bad request is returned
-*
 
 ### Validator
 
@@ -65,5 +63,16 @@ Running start.sh (or start.bat for MS Windows) script should bring up all servic
 * Uses nextjs with react
 * Uses CORS to be able to communicate to the generator and validator services
 * Has basic UI using material UI
-* Unittesting has a problem but the idea is to basically test the events that occur simulating user input
 * Tested using chrome
+* Added unittesting that uses react library and user events to validate basic scenarios
+* Added Images for ui state
+
+
+![generated_token_ui](https://github.com/abdelrahman-e/web-token-generation-validation/assets/56705001/aa955370-3682-4e8d-b481-153ed29df4b0)
+
+![valid token_ui](https://github.com/abdelrahman-e/web-token-generation-validation/assets/56705001/f9be05c2-d01f-4d71-bf4e-93105f737659)
+
+![invalid_token_ui](https://github.com/abdelrahman-e/web-token-generation-validation/assets/56705001/7012f343-391b-4e3e-9eac-ba1e4b9eb9bb)
+
+
+
