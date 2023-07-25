@@ -6,7 +6,8 @@
     "dev": "next dev -p 8080",
     "build": "next build",
     "start": "next build && next start -p 8080",
-    "test": "jest --clearCache&& jest"
+    "test": "jest --clearCache&& jest",
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",

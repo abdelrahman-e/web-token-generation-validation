@@ -3,5 +3,15 @@ module.exports = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1'
   },
-  testEnvironment: 'jsdom'
+  testEnvironment: 'jsdom',
+  preset: 'ts-jest',
+  transform: {
+    '^.+\\.tsx?$': [
+      'ts-jest',
+      {
+        //the content you'd placed at "global"
+        tsConfig: 'tsconfig.test.json'
+      }
+    ]
+  }
 };
