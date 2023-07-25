@@ -46,7 +46,7 @@ Running start.sh (or start.bat for MS Windows) script should bring up all servic
 ### General
 
 * Each spring service is separate
-* The generator service has 100% test coverage(with an integration test as well), the validator has only unit testing
+* The generator service has 100% test coverage(with an integration test as well), the validator has unit testing
   for util only given it's the same logic
 
 ### Generator
