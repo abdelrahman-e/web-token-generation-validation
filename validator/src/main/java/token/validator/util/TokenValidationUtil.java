@@ -11,7 +11,7 @@ public class TokenValidationUtil {
         int sum = 0;
         for (int i = 0; i < digits.length(); i++) {
             int digit = Character.getNumericValue(digits.charAt(i));
-            if ((digits.length() - i) % 2 == 0) {
+            if (i % 2 == 0) {
                 digit *= 2;
                 if (digit > 9) {
                     digit -= 9;
